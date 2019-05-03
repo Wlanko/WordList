@@ -9,7 +9,8 @@
 import UIKit
 
 class LessonTopicCell: UITableViewCell {
-
+    @IBOutlet weak var topicLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +21,7 @@ class LessonTopicCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    func setData(value: String){
+        topicLbl.text = value
+    }
 }

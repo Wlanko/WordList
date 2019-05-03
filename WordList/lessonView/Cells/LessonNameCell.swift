@@ -9,7 +9,8 @@
 import UIKit
 
 class LessonNameCell: UITableViewCell {
-
+    @IBOutlet weak var nameLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +20,10 @@ class LessonNameCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setData(value: String){
+        nameLbl.text = value
     }
 
 }

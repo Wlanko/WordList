@@ -9,7 +9,8 @@
 import UIKit
 
 class StartLessonCell: UITableViewCell {
-
+    
+    @IBOutlet weak var startLessonButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +20,16 @@ class StartLessonCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func StartLesson(_ sender: Any) {
+        print("1")
+    }
+    
+    
+    func setData() {
+        startLessonButton.layer.cornerRadius = 5
+        
     }
 
 }

@@ -9,16 +9,17 @@
 import Foundation
 import CodableFirebase
 
-struct lessons: Codable{
-    let lessons: Dictionary<String, lesson>
+struct Lessons: Codable{
+    let lessons: Dictionary<String, Lesson>
 }
-struct lesson: Codable{
+struct Lesson: Codable{
     var name: String
-    var list: [VladikMudak]
+    var list: [WordsList]
+    var topic: String
     var ownerid: String
 }
 
-struct VladikMudak: Codable {
+struct WordsList: Codable {
     var en: String?
     var ru: String?
     var ua: String?

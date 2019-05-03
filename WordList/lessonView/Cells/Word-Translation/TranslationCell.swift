@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TranslationCell: UITableViewCell {
-
+class WordCell: UITableViewCell {
+    @IBOutlet weak var translationLbl: UILabel!
+    @IBOutlet weak var wordLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,8 +19,13 @@ class TranslationCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        
+    }
+    
+    func setData(value: WordsList){
+        translationLbl.text = value.ua
+        wordLbl.text = value.en
     }
 
 }

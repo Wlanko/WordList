@@ -9,7 +9,8 @@
 import UIKit
 
 class WordCell: UITableViewCell {
-
+    @IBOutlet weak var wordLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

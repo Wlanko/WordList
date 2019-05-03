@@ -9,7 +9,8 @@
 import UIKit
 
 class CreatorIdCell: UITableViewCell {
-
+    @IBOutlet weak var creatorIdLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +21,7 @@ class CreatorIdCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    func setData(value: String){
+        creatorIdLbl.text = value
+    }
 }
