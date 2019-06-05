@@ -41,12 +41,17 @@ class LessonViewController: UIViewController, UITableViewDataSource, UITableView
             return creatorIdCell
         case 3:
             let wordsListCell = tableView.dequeueReusableCell(withIdentifier: "WordsListCell") as! WordsListCell
-            wordsListCell.setData(value: self.lesson?.list ?? [])
+            wordsListCell.setData(value: self.lesson?.list ?? [], vc: self)
             return wordsListCell
             
         default:
             cell.setData(value: self.lesson?.name ?? "none")
             return cell
         }
+    }
+    
+    func startLesson(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "LearnLessonViewController") as! LearnLessonViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

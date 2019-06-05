@@ -8,6 +8,7 @@ target 'WordList' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'CodableFirebase'
+  pod 'Firebase/Auth'
   # Pods for WordList
 
   target 'WordListTests' do

@@ -8,9 +8,27 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 import CodableFirebase
 
-
+func authentication(email: String, userPassword: String, callback: @escaping (Bool) -> Void){
+    var flag: Bool = true
+    Auth.auth().signIn(withEmail: email, password: userPassword) { (result, error) in
+        if error == nil{
+            print("Hello")
+            print(result!)
+            print(flag)
+            callback(Bool(flag))
+        }
+        else{
+            print("hello")
+            print(error!)
+            flag = false
+            callback(Bool(flag))
+        }
+    }
+    
+}
 
 func getLessonsIds(callback: @escaping (Array<String>) -> Void){
     var ref: DatabaseReference!

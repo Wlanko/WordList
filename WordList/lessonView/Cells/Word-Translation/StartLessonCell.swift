@@ -9,6 +9,9 @@
 import UIKit
 
 class StartLessonCell: UITableViewCell {
+    var vc: LessonViewController!
+    var list: [WordsList] = []
+    var viewController: UIViewController?
     
     @IBOutlet weak var startLessonButton: UIButton!
     override func awakeFromNib() {
@@ -24,12 +27,15 @@ class StartLessonCell: UITableViewCell {
     
     @IBAction func StartLesson(_ sender: Any) {
         print("1")
+        
+        vc.startLesson()
     }
     
     
-    func setData() {
+    func setData(wList: [WordsList], viewController: LessonViewController) {
+        vc = viewController
         startLessonButton.layer.cornerRadius = 5
-        
+        list = wList
     }
 
 }

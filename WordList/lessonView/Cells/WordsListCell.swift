@@ -13,6 +13,7 @@ class WordsListCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var wordsLbl: UILabel!
     @IBOutlet weak var wordsTableView: UITableView!
     
+    var viewController: LessonViewController!
     var list: [WordsList] = []
     
     override func awakeFromNib() {
@@ -26,7 +27,8 @@ class WordsListCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource
         // Configure the view for the selected state
     }
     
-    func setData(value: [WordsList]){
+    func setData(value: [WordsList], vc: LessonViewController){
+        viewController = vc
         wordsLbl.text = "Words"
         list = value
         
@@ -46,13 +48,12 @@ class WordsListCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == list.count {
             let startLessonCell = tableView.dequeueReusableCell(withIdentifier: "StartLessonCell") as! StartLessonCell
-            startLessonCell.setData()
+            startLessonCell.setData(wList: list, viewController: viewController)
             return startLessonCell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "WordCell") as! WordCell
             cell.setData(value: list[indexPath.row])
-            print("Hello")
             return cell
         }
     }

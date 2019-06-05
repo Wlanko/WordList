@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         getLessonsIds(callback: { (list) in
             for i in 0..<list.count{
                 self.lessonsIds.append(list[i])
