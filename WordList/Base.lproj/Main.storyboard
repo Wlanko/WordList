@@ -322,7 +322,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-5d-A4d">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-5d-A4d">
                                 <rect key="frame" x="58" y="28" width="309" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -350,10 +350,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J5I-PM-TCu"/>
                     </view>
+                    <connections>
+                        <outlet property="translationLable" destination="2pP-1E-JRW" id="4us-rq-oXR"/>
+                        <outlet property="translationTextField" destination="Ihc-ED-W0Q" id="QQ3-GX-lMH"/>
+                        <outlet property="wordLable" destination="lyB-vZ-3qs" id="cwi-Yj-aCh"/>
+                        <outlet property="wordTextField" destination="0kf-5d-A4d" id="SDa-7z-uXy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbB-Ph-NNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3564" y="114.69265367316342"/>
+            <point key="canvasLocation" x="2698" y="115"/>
         </scene>
         <!--Log In With Password View-->
         <scene sceneID="1Zg-9B-AqS">
@@ -365,7 +371,6 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpf-a7-2Sg">
                                 <rect key="frame" x="5" y="164" width="365" height="30"/>
-                                <color key="backgroundColor" red="0.093560481639999998" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wfk-VD-d8P"/>
                                 </constraints>
@@ -373,9 +378,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64U-WK-VY4">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="64U-WK-VY4">
                                 <rect key="frame" x="5" y="274" width="365" height="30"/>
-                                <color key="backgroundColor" red="0.093560481639999998" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tff-0l-6BH"/>
                                 </constraints>

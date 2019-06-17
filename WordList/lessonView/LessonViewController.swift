@@ -52,6 +52,7 @@ class LessonViewController: UIViewController, UITableViewDataSource, UITableView
     
     func startLesson(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "LearnLessonViewController") as! LearnLessonViewController
+        vc.list = (self.lesson?.list)!
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LogInWithPasswordView: UIViewController {
+class LogInWithPasswordView: UIViewController, UITextFieldDelegate {
     var password: String = ""
     var email: String = ""
     var flag: Bool!
@@ -21,6 +21,10 @@ class LogInWithPasswordView: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     
     @IBAction func LogInButton(_ sender: Any) {
+        logIn()
+    }
+    
+    func logIn(){
         email = emailTextField.text ?? ""
         password = passwordTextField.text ?? ""
         
@@ -35,15 +39,25 @@ class LogInWithPasswordView: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         })
-        
-        
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
-        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == emailTextField{
+            passwordTextField.becomeFirstResponder()
+            return true
+        }
+        else{
+            logIn()
+        }
+        return true
     }
     
     func setData(){
