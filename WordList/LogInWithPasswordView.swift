@@ -18,9 +18,13 @@ class LogInWithPasswordView: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordLbl: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
-    @IBAction func LogInButton(_ sender: Any) {
+    @IBAction func signUpButton(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func LogInButton(_ sender: UIButton) {
         logIn()
     }
     
@@ -61,7 +65,7 @@ class LogInWithPasswordView: UIViewController, UITextFieldDelegate {
     }
     
     func setData(){
-        logInButton.layer.cornerRadius = 5
+        signInButton.layer.cornerRadius = 5
         emailLbl.text = "E-mail"
         passwordLbl.text = "Password"
         

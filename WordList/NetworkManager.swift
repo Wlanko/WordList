@@ -11,6 +11,12 @@ import Firebase
 import FirebaseAuth
 import CodableFirebase
 
+func createUser(email: String, password: String){
+//    Auth.auth().createUser(withEmail: email, password: password) { (result, eror) in
+//        <#code#>
+//    }
+}
+
 func authentication(email: String, userPassword: String, callback: @escaping (Bool) -> Void){
     var flag: Bool = true
     Auth.auth().signIn(withEmail: email, password: userPassword) { (result, error) in
