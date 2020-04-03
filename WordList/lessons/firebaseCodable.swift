@@ -24,3 +24,11 @@ struct WordsList: Codable {
     var ru: String?
     var ua: String?
 }
+
+struct Users: Codable{
+    let user: Dictionary<String, User>
+}
+
+struct User: Codable {
+    var name: String
+}

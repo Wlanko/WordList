@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var userId = CreateId()
+        
 
         getLessonsIds(callback: { (list) in
             for i in 0..<list.count{

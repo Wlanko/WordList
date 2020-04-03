@@ -11,10 +11,17 @@ import Firebase
 import FirebaseAuth
 import CodableFirebase
 
-func createUser(email: String, password: String){
-//    Auth.auth().createUser(withEmail: email, password: password) { (result, eror) in
-//        <#code#>
-//    }
+func createUser(email: String, password: String, callback: @escaping (Bool) -> Void){
+    var flag = true
+    Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+        if error == nil{
+            callback(Bool(flag))
+        }
+        else{
+            flag = false
+            callback(Bool(flag))
+        }
+    }
 }
 
 func authentication(email: String, userPassword: String, callback: @escaping (Bool) -> Void){
@@ -43,6 +50,7 @@ func getLessonsIds(callback: @escaping (Array<String>) -> Void){
         guard let value = snapshot.value else { return }
         do {
             let model = try FirebaseDecoder().decode(Lessons.self, from: value)
+            print(model.lessons)
             callback(Array(model.lessons.keys))
             //print(model.lessons.keys)
         } catch let error {

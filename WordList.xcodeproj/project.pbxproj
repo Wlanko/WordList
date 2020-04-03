@@ -10,6 +10,7 @@
 		12D7610397100568253997CA /* Pods_WordListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E78CB26EB6FF92BABCFC74 /* Pods_WordListTests.framework */; };
 		AB5707D40253C81F6F9CF876 /* Pods_WordListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D60157045653931D5B0382D /* Pods_WordListUITests.framework */; };
 		EC44801C90B9084AE947AFA8 /* Pods_WordList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384E115EFDC3EB8AD929F58D /* Pods_WordList.framework */; };
+		F508D28B2411291B005E8D51 /* CreateId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508D28A2411291B005E8D51 /* CreateId.swift */; };
 		F53DCE0022E1C8E70004B168 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53DCDFF22E1C8E70004B168 /* SignUpViewController.swift */; };
 		F543206C228496A000460965 /* LogInWithPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F543206B228496A000460965 /* LogInWithPasswordView.swift */; };
 		F5462D7D2255336600E939FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5462D7C2255336600E939FE /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 		F5462D922255336B00E939FE /* WordListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5462D912255336B00E939FE /* WordListTests.swift */; };
 		F5462D9D2255336B00E939FE /* WordListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5462D9C2255336B00E939FE /* WordListUITests.swift */; };
 		F55DBCC5227B683800EC7EBF /* StartLessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DBCC4227B683800EC7EBF /* StartLessonCell.swift */; };
+		F57E0E8023B4D0C700475295 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E0E7F23B4D0C700475295 /* UserViewController.swift */; };
 		F58C6BC7225BC9E500C60192 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F58C6BC6225BC9E400C60192 /* GoogleService-Info.plist */; };
 		F5A30F48229704B100CA5F08 /* LearnLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A30F47229704B100CA5F08 /* LearnLessonViewController.swift */; };
 		F5C02E272263C2410028FEAE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C02E262263C2410028FEAE /* NetworkManager.swift */; };
@@ -60,6 +62,7 @@
 		E6D5D560B108579740F117BC /* Pods-WordListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordListTests.debug.xcconfig"; path = "Target Support Files/Pods-WordListTests/Pods-WordListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E870A555A2DAF9AA22D7AA26 /* Pods-WordListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordListUITests.release.xcconfig"; path = "Target Support Files/Pods-WordListUITests/Pods-WordListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F1E78CB26EB6FF92BABCFC74 /* Pods_WordListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F508D28A2411291B005E8D51 /* CreateId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateId.swift; sourceTree = "<group>"; };
 		F53DCDFF22E1C8E70004B168 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F543206B228496A000460965 /* LogInWithPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInWithPasswordView.swift; sourceTree = "<group>"; };
 		F5462D792255336600E939FE /* WordList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +79,7 @@
 		F5462D9C2255336B00E939FE /* WordListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListUITests.swift; sourceTree = "<group>"; };
 		F5462D9E2255336B00E939FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F55DBCC4227B683800EC7EBF /* StartLessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartLessonCell.swift; sourceTree = "<group>"; };
+		F57E0E7F23B4D0C700475295 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F58C6BC6225BC9E400C60192 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F5A30F47229704B100CA5F08 /* LearnLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnLessonViewController.swift; sourceTree = "<group>"; };
 		F5C02E262263C2410028FEAE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -157,11 +161,13 @@
 			children = (
 				F5462D7C2255336600E939FE /* AppDelegate.swift */,
 				F5C02E262263C2410028FEAE /* NetworkManager.swift */,
+				F508D28A2411291B005E8D51 /* CreateId.swift */,
 				F5D40A6A22743AA300BCB1EA /* lessonView */,
 				F5D40A67226F830D00BCB1EA /* lessons */,
 				F5A30F47229704B100CA5F08 /* LearnLessonViewController.swift */,
 				F543206B228496A000460965 /* LogInWithPasswordView.swift */,
 				F53DCDFF22E1C8E70004B168 /* SignUpViewController.swift */,
+				F57E0E7F23B4D0C700475295 /* UserViewController.swift */,
 				F5462D802255336600E939FE /* Main.storyboard */,
 				F5462D832255336B00E939FE /* Assets.xcassets */,
 				F5462D852255336B00E939FE /* LaunchScreen.storyboard */,
@@ -475,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F543206C228496A000460965 /* LogInWithPasswordView.swift in Sources */,
+				F57E0E8023B4D0C700475295 /* UserViewController.swift in Sources */,
 				F5C02E272263C2410028FEAE /* NetworkManager.swift in Sources */,
 				F5462D7F2255336600E939FE /* ViewController.swift in Sources */,
 				F5462D7D2255336600E939FE /* AppDelegate.swift in Sources */,
@@ -487,6 +494,7 @@
 				F5A30F48229704B100CA5F08 /* LearnLessonViewController.swift in Sources */,
 				F5D40A762274834B00BCB1EA /* WordsListCell.swift in Sources */,
 				F5D40A6F2274828000BCB1EA /* LessonNameCell.swift in Sources */,
+				F508D28B2411291B005E8D51 /* CreateId.swift in Sources */,
 				F55DBCC5227B683800EC7EBF /* StartLessonCell.swift in Sources */,
 				F5C02E292263C2C10028FEAE /* firebaseCodable.swift in Sources */,
 			);

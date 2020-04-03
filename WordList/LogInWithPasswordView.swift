@@ -35,7 +35,7 @@ class LogInWithPasswordView: UIViewController, UITextFieldDelegate {
         authentication(email: email, userPassword: password, callback: { (flag) in
             self.flag = flag
             if flag == true{
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "LessonsViewController") as! ViewController
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! ViewController
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             else{
@@ -47,6 +47,14 @@ class LogInWithPasswordView: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if Auth.auth().currentUser != nil {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+            print((Auth.auth().currentUser?.uid)!)
+        }
+        
         setData()
         emailTextField.delegate = self
         passwordTextField.delegate = self
